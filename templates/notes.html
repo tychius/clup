@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <!-- This will be populated with the topic notes -->
+    </div>
+    <form class="mt-5">
+        <div class="form-group">
+            <label for="noteContent">New Note</label>
+            <textarea class="form-control" id="noteContent" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary">Save Note</button>
+    </form>
+</div>
+{% endblock %}

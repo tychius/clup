@@ -1,26 +1,18 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "layout.html" %}
 
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
-
-    <title>Deep Learning App</title>
-  </head>
-  <body>
-    <h1>Welcome to Deep Learning App</h1>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-  </body>
-</html>
+{% block content %}
+<div class="container mt-5">
+    <h1>Welcome to the Learning App</h1>
+    <p>This is a platform where you can learn and grow. Choose from a variety of topics and start learning today!</p>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>New here?</h2>
+            <p><a href="/register">Register for an account</a> to get started.</p>
+        </div>
+        <div class="col-md-6">
+            <h2>Returning user?</h2>
+            <p>Welcome back! <a href="/dashboard">View your dashboard</a> to continue learning.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

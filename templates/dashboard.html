@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Your Dashboard</h1>
+    <p>Welcome back, {{ user_name }}! Here's your current progress:</p>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Your Topics</h2>
+            <div class="row">
+                <!-- This will be dynamic based on user's progress -->
+                {% for topic in topics %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card topic-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ topic.title }}</h5>
+                            <p class="card-text">Topic progress: {{ topic.progress }}%</p>
+                            <a href="#" class="btn btn-primary">View Notes</a>
+                            <a href="#" class="btn btn-secondary">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <p><a href="/add_topic">Add a new topic</a></p>
+        </div>
+        <div class="col-md-6">
+            <h2>CheckPoints</h2>
+            <ul>
+                <!-- This will be dynamic based on user's achievements -->
+                {% for checkpoint in checkpoints %}
+                <li>{{ checkpoint }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

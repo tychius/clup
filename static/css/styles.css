@@ -1,8 +1,39 @@
 body {
-    background-color: #f8f9fa;
-    color: #212529;
+    background-color: #F5F5F5;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.card {
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.navbar, .footer {
+    background-color: #333333;
+}
+
+.btn, .nav-link, .nav-item {
+    color: #6D6D6D;
+}
+
+.topic-card {
+    border: 1px solid #6D6D6D;
+    background-color: #FFFFFF;
+    padding: 20px;
     margin-bottom: 20px;
+}
+
+.topic-card .btn-primary {
+    background-color: #6d747c;
+    border-color: #6d747c;
+}
+
+.topic-card .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.topic-card .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
 }
